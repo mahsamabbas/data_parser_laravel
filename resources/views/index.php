@@ -3,9 +3,9 @@
 <html>
 <head>
 <title>Data Parser</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 <!-- App Styles -->
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 </head>
@@ -108,8 +108,8 @@
         </div>
         <br/>
           <div class="alert alert-danger" ng-if="vm.errorMsg">
-               No Products To Show
-            </div>
+               {{vm.errorMsgBody}}
+          </div>
     </div>
 
     <!-- Product Detail Modal -->

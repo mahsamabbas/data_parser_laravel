@@ -15,6 +15,7 @@
       vm.activeProduct;
       vm.showLoader = false;
       vm.errorMsg = false;
+      vm.errorMsgBody;
       //Default URL
       vm.url = 'http://pf.tradetracker.net/?aid=1&type=xml&encoding=utf8&fid=251713&categoryType=2&additionalType=2&limit=10';
 
@@ -27,11 +28,18 @@
           "url": vm.url
         }).then(function(data) {
         
+        
         //Assign data to variable
-         vm.urlentries = data.products || data.product;
+        if(data.product || data.products){
+          vm.urlentries = data.products || data.product;
+        } else{
+          vm.urlentries = [];
+        }
+         
 
          if(!vm.urlentries.length || vm.urlentries.length <= 1 || vm.urlentries.length == undefined){
           vm.errorMsg = true;
+          vm.errorMsgBody = 'No Products To Show';
          }
          vm.showLoader = false;
        
