@@ -22,6 +22,8 @@
       //Func to pass URL to server 
       // and get back the processed data
       vm.logNewUrl = function() {
+
+        //Show Loader
         vm.showLoader = true;
         
         Entry.saveEntry({
@@ -32,15 +34,20 @@
         //Assign data to variable
         if(data.product || data.products){
           vm.urlentries = data.products || data.product;
+          vm.errorMsg = false;
         } else{
+
+          //In case of error
           vm.urlentries = [];
         }
          
-
+         //If length of data is zero
          if(!vm.urlentries.length || vm.urlentries.length <= 1 || vm.urlentries.length == undefined){
           vm.errorMsg = true;
           vm.errorMsgBody = 'No Products To Show';
          }
+
+         //Hide Loader
          vm.showLoader = false;
        
         }, function(error) {
