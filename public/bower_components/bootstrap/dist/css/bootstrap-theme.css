@@ -657,4 +657,7 @@ table thead {
   margin-bottom: 4px;
   color: #d9edf7;
 }
+.modal-body h2 {
+  word-break: break-all;
+}
 /*# sourceMappingURL=bootstrap-theme.css.map */
