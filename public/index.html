@@ -5,7 +5,7 @@
 <title>Data Parser</title>
 
 <!-- App Styles -->
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 </head>
